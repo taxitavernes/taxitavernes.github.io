@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tele-Taxi</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #content-frame {
+            width: 100%;
+            height: 100vh; /* Full viewport height */
+            border: none; /* Remove iframe border */
+        }
+    </style>
+</head>
+<body>
+    <iframe id="content-frame" src="./simplified.html"></iframe>
+
+    <script>
+        // Function to determine the aspect ratio and load the appropriate content
+        function loadContent() {
+            const aspectRatio = window.innerWidth / window.innerHeight;
+
+            // Check if the aspect ratio is closer to mobile (9:16) or desktop
+            const isMobile = aspectRatio < 1; // Aspect ratio less than 1 indicates portrait mode
+
+            // Set the iframe source to the appropriate file
+            const fileToLoad = isMobile ? './mobile.html' : './desktop.html';
+            document.getElementById('content-frame').src = fileToLoad;
+        }
+
+        // Load content on page load
+        loadContent();
+
+        // Optional: Reload content if the window is resized
+        window.addEventListener('resize', () => {
+            loadContent();
+        });
+    </script>
+</body>
+</html>

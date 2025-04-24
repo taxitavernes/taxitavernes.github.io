@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web-page for Tele-Taxi, a taxi service in Tavernes de la Valldigna and Cullera.">
+    <meta name="author" content="Francisco Javier Gimeno Ortiz">
+    <meta name="keywords" content="Tele-Taxi, taxi service, Tavernes de la Valldigna, Cullera, 24h service, AVE services, airport services, port services, Servicio 24 horas, Servicios AVE, Servicios Puerto, Servicios Aeropuerto, Servicios Puerto">
+    <meta name="Copyright" content="Francisco Javier Gimeno Ortiz">
+    <meta name="robots" content="index, follow">
+    <title>Tele-Taxi</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1, h2, h3, p {
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Title Section */
+        .title-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            min-height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .title-section h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            font-family: 'Arial Black', 'Arial', sans-serif;
+            color: #FFD700;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            margin: 10px 0;
+        }
+
+        .title-section h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .background-images {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .background-images img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0; /* Start with all images hidden */
+            filter: blur(5px); /* Optional: Keep the blur effect */
+            animation: fade 16s infinite; /* Apply the fade animation */
+        }
+
+        .background-images img:nth-child(1) {
+            opacity: 1; /* Make the first image fully visible on page load */
+            animation-delay: 0s; /* First image starts immediately */
+        }
+
+        .background-images img:nth-child(2) {
+            animation-delay: 4s; /* Second image starts after 4 seconds */
+        }
+
+        .background-images img:nth-child(3) {
+            animation-delay: 8s; /* Third image starts after 8 seconds */
+        }
+
+        .background-images img:nth-child(4) {
+            animation-delay: 12s; /* Fourth image starts after 12 seconds */
+        }
+
+        /* Keyframes for the fade animation */
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+            25% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* Subtitles Section */
+        .subtitles {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            width: 90%;
+            margin: 20px auto;
+            gap: 20px;
+        }
+
+        .subtitles div {
+            flex: 1;
+            text-align: center;
+            background-color: rgba(128, 128, 128, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .subtitles div h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitles div h3 {
+            font-size: 1.5rem;
+        }
+
+        /* Icon Container */
+        .icon-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: rgba(128, 128, 128, 0.5);
+            margin-top:auto;
+        }
+
+        .icon-box {
+            text-align: center;
+            flex: 1 1 15%;
+            margin: 10px;
+        }
+
+        .icon-box img {
+            width: 100%; /* Make the image responsive */
+            max-width: 20%; /* Limit the image size to 25% of the display width */
+            height: auto; /* Maintain the aspect ratio */
+            margin-bottom: 10px;
+        }
+
+        .icon-box p {
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .footer-container div {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+
+        .footer-bottom {
+            background-color: #222;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Title Section -->
+    <div class="title-section">
+        <!-- Background images -->
+        <div class="background-images">
+            <img src="./img/title/1.jpg" alt="Background 1">
+            <img src="./img/title/2.jpg" alt="Background 2">
+            <img src="./img/title/3.jpg" alt="Background 3">
+            <img src="./img/title/4.jpg" alt="Background 4">
+        </div>
+
+        <!-- Title content -->
+        <h1>Tele-Taxi</h1>
+        <h1 class="h1Sub">Tu servicio de confianza</h1>
+        <div class="subtitles">
+            <div class="left">
+                <h2><a href="https://maps.app.goo.gl/fRmQusr43aHgSgxH8">Tavernes de la Valldigna</a></h2>
+                <h3>Area de la Safor</h3>
+                <h2 id="phone_subtitle"><a href="tel:639654744">639 654 744</a></h2>
+                <h2 id="phone_subtitle"><a href="tel:962836566">962 836 566</a></h2>
+            </div>
+            <div class="right">
+                <h2><a href="https://maps.app.goo.gl/cidsnFREbn8QJPtAA">Cullera</a></h2>
+                <h2 id="phone_subtitle"><a href="tel:690042814">690 042 814</a></h2>
+            </div>
+        </div>
+        <!-- Icon Container -->
+        <div class="icon-container">
+            <div class="icon-box">
+                <img src="./img/icon/pmr.png" alt="Icono PMR">
+                <p>Taxi adaptado</p>
+            </div>
+            <div class="icon-box">
+                <img src="./img/icon/plazas.png" alt="Icono PMR">
+                <p>7 Plazas</p>
+            </div>
+            <div class="icon-box">
+                <img src="./img/icon/24.png" alt="Icono 24h">
+                <p>Servicio 24 horas</p>
+            </div>
+            <div class="icon-box">
+                <a href="https://www.renfe.com/es/es" target="_blank">
+                    <img src="./img/icon/ave.png" alt="Icono AVE">
+                    <p>Servicios AVE</p>
+                </a>
+            </div>
+            <div class="icon-box">
+                <a href="https://maps.app.goo.gl/UYR8Mqhts13cEapz6" target="_blank">
+                    <img src="./img/icon/puerto.png" alt="Icono Puerto">
+                    <p>Servicios Puerto</p>
+                </a>
+            </div>
+            <div class="icon-box">
+                <a href="https://maps.app.goo.gl/1f4YxQCcU9wv37NN9" target="_blank">
+                    <img src="./img/icon/aeropuerto.png" alt="Icono Aeropuerto">
+                    <p>Servicios Aeropuerto</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-contact">
+                <h3>Contactanos</h3>
+                <p>Móvil: <a href="tel:639654744">639 654 744</a></p>
+                <p>Telefono: <a href="tel:962836566">962 836 566</a></p>
+                <p>Email: <a href="mailto:teletaxi@hotmail.es">teletaxi@hotmail.es</a></p>
+                <p>Dirección: Tavernes de la Valldigna, España</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tele-Taxi. Todos los derechos reservados.</p>
+            <a href="https://www.flaticon.es/autores/freepik" title="iconos">Iconos creados por Freepik - Flaticon</a>
+            <p>Esta página web no hace uso de cookies ni recolecta datos personales.</p>
+        </div>
+    </footer>
+</body>
+</html>
